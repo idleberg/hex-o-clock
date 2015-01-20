@@ -1,0 +1,194 @@
+html,
+body {
+  height: 100%;
+   /*The html and body elements cannot have any padding or margin. */
+}
+
+html {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	transition: all 0.5s ease;
+	font-family: 'Fira Sans', 'HelveticaNeue-Thin', Helvetica, Arial, sans-serif;
+	font-size:14px;
+	padding:0;
+	margin:0;
+	overflow: hidden;
+	text-rendering: optimizeLegibility;
+	line-height:1.6em;
+}
+
+a{
+	cursor: pointer;
+}
+
+label {
+	font-weight: inherit;
+}
+
+
+.icon {
+	text-decoration: none;
+}
+
+.btn {
+	font-size: 18px;
+	padding: 8px 15px;
+}
+
+.arrow-up {
+	display: block;
+	text-align: center;
+	font-size: 48px;
+	z-index:2;
+}
+
+.navbar {
+	opacity: 0.85;
+}
+
+
+.nav>li{
+	padding: 5px;
+	color: #777;
+}
+
+.nav>li>a{
+	padding: 0;
+}
+
+.# li>a {
+	color: #fff;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.navbar-fixed-bottom, .# {
+	z-index: 0;
+}
+
+.navbar-default .navbar-offcanvas, .navmenu-default {
+	/* http://subtlepatterns.com/ */
+	background: #222 url(../img/texture.png) repeat;
+	border-color: #444;
+}
+
+.navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover, .navmenu-default .navmenu-nav>li>a:focus, .navmenu-default .navmenu-nav>li>a:hover {
+	color: #ccc;
+	background-color: transparent;
+}
+
+.navmenu-brand{
+	padding: 10px 0;
+	font-size: 1.2em;
+}
+
+.navbar-offcanvas, .navmenu{
+	width: auto;
+	padding: 0 10px;
+}
+
+.divider{
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: #404040;
+	background-color: rgba(64,64,64,0.666);
+}
+
+.row{
+	margin-top: 10px;
+}
+
+.ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon{
+	opacity: 0.333;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  vertical-align: middle;
+}
+
+a {
+  color: #c7524c;
+}
+
+a:hover {
+  color: #c7524c;
+}
+
+a:focus, a:active {
+  color:#914d5b;
+}
+
+.btn {
+  font-size: inherit;
+  padding: 10px 0;
+}
+
+.btn-link {
+  color:#fff;
+}
+
+.form-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #777;
+}
+
+.btn-link:hover,
+.btn-link:active,
+.btn-link:focus {
+  color:#fff;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline:transparent;
+}
+
+
+#hex {
+  color: #fff;
+  font-family: 'Fira Mono', Menlo, sans-serif;
+  text-align: center;
+  display: block;
+  min-width: 200px;
+  text-rendering: geometricPrecision;
+  -webkit-transition: font-size 0.333s ease;
+  -moz-transition: font-size 0.333s ease;
+  -o-transition: font-size 0.333s ease;
+  transition: font-size 0.333s ease;
+  z-index:0;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.#{
+  z-index:10;
+}
+
+.navbar-offcanvas{
+  z-index:5;
+}
+
+.toggle-menu{
+  padding:5px 10px 0;
+}

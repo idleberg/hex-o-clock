@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hex o'clock</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Core CSS -->
+    <link class="google-font" href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500' rel='stylesheet' type='text/css'>
+
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    <link href="dist/css/hex-o-clock.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color:#000;display:none">
+
+    <div class="container-fluid background"></div>
+
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid nav-container">
+            <div id="navbar">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li id="sweetspot">
+                        <button class="btn btn-link"><i class="fa fa-lg fa-bars foreground toggle-menu" data-toggle="offcanvas" data-target="#configMenu" data-canvas="body"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="absolute-center">
+        <p id="hex" class="foreground">#000000</p>
+    </div>
+
+    <nav id="configMenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
+
+        <h1 class="navmenu-brand">Background</h1>
+        <ul class="nav navmenu-nav">
+
+            <li>
+                <label id="labelFontSize">Font size: <span id="valueFontSize"></span>
+                </label>
+                <form action="action_page.php" method="get">
+                    <input id="inputFontSize" type="range" name="points" min="1" max="40" value="4">
+                </form>
+            </li>
+
+            <li>
+                <label id="labelInvert">Invert: <span id="valueInvert"></span>
+                </label>
+                <form action="action_page.php" method="get">
+                    <input id="inputInvert" class="filter" type="range" name="points" min="0" max="100" value="0">
+                </form>
+            </li>
+
+            <li>
+                <label id="labelHue">Hue rotate: <span id="valueHue"></span>
+                </label>
+                <form action="action_page.php" method="get">
+                    <input id="inputHue" class="filter" type="range" name="points" min="0" max="360" value="0">
+                </form>
+            </li>
+
+            <li>
+                <label id="labelSaturate">Saturate: <span id="valueSaturate" class="filter-label"></span>
+                </label>
+                <form action="action_page.php" method="get">
+                    <input id="inputSaturate" class="filter" type="range" name="points" min="0" max="500" value="100">
+                </form>
+            </li>
+
+        </ul>
+
+        <h1 class="navmenu-brand">Foreground</h1>
+
+        <ul class="nav navmenu-nav">
+            <li>
+                <div class="form-group">
+                    <label id="labelFontFamily">Font family:</label>
+                    <input type="text" class="form-control" id="inputFontFamily" placeholder="e.g. Fira Mono, Lato:100">
+                </div>
+            </li>
+            <li><a href="#" class="close-menu visible-xs"><i class="fa fa-fw fa-chevron-right"></i> Close menu</a>
+            </li>
+            <li><a href="#about" target="_blank" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-fw fa-question-circle"></i> About</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="aboutModalLabel">Hex o'clock</h4>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About</strong>
+                    </p>
+                    <p>Based upon <a href="http://www.jacopocolo.com/hexclock/" target="_blank">hex clock</a>, a clock using the hex-value of the current time as background color, and my own <a href="https://github.com/idleberg/fl_Ed" target="_blank">fl_Ed</a> interface experimentation. This fork lets you manipulate the color and text parameters seen on this website. All changes will be sabed in your browser's <a href="http://diveintohtml5.info/storage.html" target="_blank">localStorage</a> and restored on future visits.
+                        <p>
+
+                            <strong>Credits</strong>
+                            <ul>
+                                <li class="item"><a href="https://github.com/jacopocolo/Hex-clock" target="_blank">Hex clock</a> by Jacopo Colo</li>
+                                <li class="item"><a href="http://subtlepatterns.com/low-contrast-linen/">Linen Texture</a> by <a href="http://www.subtlepatterns.com/" target="_blank">Subtle Patterns</a>
+                                </li>
+                            </ul>
+
+                            <p>This project is released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> and hosted on <a href="https://github.com/idleberg/hexclock" target="_blank">GitHub</a>.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Core JavaScript -->
+    <script type="text/javascript">
+        debug = false;
+        precision = 100;
+    </script>
+    <script type="text/javascript" src="dist/js/hex-o-clock.min.js" defer></script>
+</body>
+
+</html>
