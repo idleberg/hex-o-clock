@@ -104,7 +104,7 @@ $(function() {
     if (distance <= 500) {
       $('.toggle-menu').stop().fadeIn(100);
     } else {
-      $('.toggle-menu').stop().fadeOut(5000);
+      $('.toggle-menu').fadeOut(5000);
     }   
   });
 
