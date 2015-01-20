@@ -17,6 +17,7 @@ body {
 	transition: all 0.5s ease;
 	font-family: 'Fira Sans', 'HelveticaNeue-Thin', Helvetica, Arial, sans-serif;
 	font-size:14px;
+	font-weight:300;
 	padding:0;
 	margin:0;
 	overflow: hidden;
