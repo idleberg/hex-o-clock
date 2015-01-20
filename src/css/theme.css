@@ -161,7 +161,7 @@ a:focus, a:active {
 
 #hex {
   color: #fff;
-  font-family: 'Lato', Menlo, sans-serif;
+  font-family: 'Lato', Menlo, monospace;
   text-align: center;
   display: block;
   min-width: 200px;

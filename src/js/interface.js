@@ -26,7 +26,7 @@ $(function() {
   // Set CSS// Set textsize label
   $('#hex').css('font-size', css['font-size'] + 'em');
   $('#hex').css({
-        'font-family': font['family'] + ', Lato, monospace',
+        'font-family': font['family'] + ', Menlo, monospace',
         'font-weight': font['weight']
       });
   $('div.background').css('-webkit-filter', 'invert('+css['invert-percentage']+'%) hue-rotate('+css['hue-rotate']+'deg) saturate('+css['saturate']+'%)');
