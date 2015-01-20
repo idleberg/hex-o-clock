@@ -37,8 +37,6 @@ $(function() {
   $('#inputFontSize').bind("click mousemove keydown",function (e) {
     changeFont();
   });
-    
-
 
   // Change invert percentage
   $('.filter, .filter-label').bind("click mousemove keydown",function (e) {

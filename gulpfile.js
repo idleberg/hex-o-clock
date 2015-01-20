@@ -45,24 +45,6 @@ gulp.task('init', ['bower'], function() {
   ])
   .pipe(gulp.dest('.'));
 
-  gulp.src([
-    'bower_components/jquery/dist/jquery.min.js'
-  ])
-  .pipe(gulp.dest('dist/js/'));
-
-  gulp.src([
-    'bower_components/font-awesome/fonts/*'
-    // 'bower_components/fira/eot/FiraSans-Light.eot',
-    // 'bower_components/fira/ttf/FiraSans-Light.ttf',
-    // 'bower_components/fira/woff/FiraSans-Light.woff'
-  ])
-  .pipe(gulp.dest('dist/fonts/'));
-
-  gulp.src([
-    'bower_components/jquery-ui/themes/smoothness/images/*'
-  ])
-  .pipe(gulp.dest('dist/css/images/'));
-
 });
 
 

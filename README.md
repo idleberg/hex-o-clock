@@ -1,15 +1,26 @@
 # Hex o’clock
 
+[![David](https://img.shields.io/david/dev/idleberg/hex-o-clock.svg?style=flat-square)](https://david-dm.org/idleberg/hex-o-clock#info=devDependencies)
+
 A hexadecimal color clock, based upon Jacopo Colò's [Hex clock](http://www.jacopocolo.com/hexclock/). This fork let's you manipulate color and text parameters. All changes will be saved in your browser's [localStorage](http://diveintohtml5.info/storage.html) and restored on future visits.
 
 *Watch a [live demo](http://idleberg.github.io/hex-o-clock/)!*
 
 ## Installation
 
-1. Clone the repository `git clone https://github.com/idleberg/hex-o-clock`
-2. Change directory `cd hex-o-clock`
-3. Install all Node dependencies `npm install`
-4. Build the application `gulp init && gulp make`
+```bash
+# Clone the repository
+git clone https://github.com/idleberg/hex-o-clock
+
+# Change directory
+cd hex-o-clock
+
+# Install all Node dependencies
+npm install
+
+# Build the application
+gulp init && gulp make
+```
 
 ## License
 
