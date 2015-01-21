@@ -142,9 +142,10 @@ a:focus, a:active {
 }
 
 .form-control {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: 1px solid #777;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #eee;
+  border: 1px solid #111;
+  border-radius:0;
 }
 
 .btn-link:hover,
@@ -191,4 +192,8 @@ a:focus, a:active {
 
 .toggle-menu{
   padding:5px 10px 0;
+}
+
+.modal-content {
+	border-radius:0;
 }
