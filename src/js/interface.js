@@ -51,7 +51,7 @@ $(function() {
 
   $('#labelFontSize').dblclick(function() {
     $('#valueFontSize').text('12em');
-    invert = $('#inputFontSize').val(9);
+    invert = $('#inputFontSize').val(12);
     changeFont();
   });
 
