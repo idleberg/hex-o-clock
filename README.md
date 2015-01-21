@@ -6,6 +6,8 @@
 
 A hexadecimal color clock, based upon Jacopo Colò's [Hex clock](http://www.jacopocolo.com/hexclock/). This fork let's you manipulate color and text parameters. All changes will be saved in your browser's [localStorage](http://diveintohtml5.info/storage.html) and restored on future visits.
 
+*Watch a [live demo](http://idleberg.github.io/hex-o-clock/)*
+
 ## Installation
 
 1. Clone the repository `git clone https://github.com/idleberg/hex-o-clock`
