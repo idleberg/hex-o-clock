@@ -26,7 +26,7 @@ $(function() {
   // Set CSS// Set textsize label
   $('#hex').css('font-size', css['font-size'] + 'em');
   $('#hex').css({
-        'font-family': font['family'] + ', Menlo, monospace',
+        'font-family': font['family'] + ', Menlo, "Courier New", monospace',
         'font-weight': font['weight']
       });
   $('div.background').css('-webkit-filter', 'invert('+css['invert-percentage']+'%) hue-rotate('+css['hue-rotate']+'deg) saturate('+css['saturate']+'%)');
@@ -37,6 +37,8 @@ $(function() {
   $('#inputFontSize').bind("click mousemove keydown",function (e) {
     changeFont();
   });
+    
+
 
   // Change invert percentage
   $('.filter, .filter-label').bind("click mousemove keydown",function (e) {
@@ -104,8 +106,19 @@ $(function() {
     if (distance <= 500) {
       $('.toggle-menu').stop().fadeIn(100);
     } else {
-      $('.toggle-menu').fadeOut(5000);
+      $('.toggle-menu').stop().fadeOut(5000);
     }   
+  });
+
+  // http://stackoverflow.com/a/23925132/1329116
+  $(".modal").on("show.bs.modal", function() {
+    var curModal;
+    curModal = this;
+    $(".modal").each(function() {
+      if (this !== curModal) {
+        $(this).modal("hide");
+      }
+    });
   });
 
 });

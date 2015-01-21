@@ -12,7 +12,6 @@ var meta      = require('./package.json'),
 
 
 var scripts = [
-  'bower_components/jquery-ui/jquery-ui.min.js',
   'bower_components/bootstrap/dist/js/bootstrap.min.js',
   'bower_components/jasny-bootstrap/js/offcanvas.js',
   'src/js/functions.js',
@@ -21,7 +20,6 @@ var scripts = [
 ];
 
 var styles = [
-  'bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css',
   'bower_components/bootstrap/dist/css/bootstrap.min.css',
   'bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
   'src/css/theme.css'
@@ -70,7 +68,6 @@ gulp.task('csslint', function() {
   ])
   .pipe(cache('linting'))
   .pipe(csslint({
-    // .panel-fullscreen requires !important
     'important': false
   }))
   .pipe(csslint.reporter())

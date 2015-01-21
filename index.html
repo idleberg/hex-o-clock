@@ -10,14 +10,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hex o’clock</title>
+    <title>Hex o'clock</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <!-- Core CSS -->
-    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400' rel='stylesheet' type='text/css'>
-
-    <link class="google-font" href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link class="google-font" href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500' rel='stylesheet' type='text/css'>
 
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -50,14 +48,6 @@
 
         <h1 class="navmenu-brand">Background</h1>
         <ul class="nav navmenu-nav">
-
-            <li>
-                <label id="labelFontSize">Font size: <span id="valueFontSize"></span>
-                </label>
-                <form action="action_page.php" method="get">
-                    <input id="inputFontSize" type="range" name="points" min="1" max="40" value="4">
-                </form>
-            </li>
 
             <li>
                 <label id="labelInvert">Invert: <span id="valueInvert"></span>
@@ -94,37 +84,73 @@
                     <input type="text" class="form-control" id="inputFontFamily" placeholder="e.g. Fira Mono, Lato:100">
                 </div>
             </li>
-            <li><a href="#" class="close-menu visible-xs"><i class="fa fa-fw fa-chevron-right"></i> Close menu</a>
+            <li>
+                <label id="labelFontSize">Font size: <span id="valueFontSize"></span>
+                </label>
+                <form action="action_page.php" method="get">
+                    <input id="inputFontSize" type="range" name="points" min="1" max="40" value="4">
+                </form>
             </li>
-            <li><a href="#about" target="_blank" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-fw fa-question-circle"></i> About</a>
+        </ul>
+
+        <h1 class="navmenu-brand">Meta</h1>
+
+        <ul class="nav navmenu-nav">
+
             </li>
+            <li><a href="#help" target="_blank" data-toggle="modal" data-target="#helpModal"><i class="fa fa-fw fa-question-circle"></i> Help</a>
+            <li><a href="#about" target="_blank" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-fw fa-info-circle"></i> About</a>
+            </li>
+            <li><a href="#" class="close-menu"><i class="fa fa-fw fa-times-circle"></i> Close</a>
         </ul>
 
     </nav>
 
-    <!-- Modal -->
+    <!-- Help Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="helpModalLabel">Help</h4>
+                </div>
+                <div class="modal-body">
+                    <strong>Basics</strong>
+                    <p>Use the sliders in the menu to adjust the various <code>filter</code> settings and <code>font-size</code>. You can also specify any local or <a href="https://www.google.com/fonts" target="_blank">Google Fonts</a>-hosted <code>font-family</code> and <em>optionally</em> provide its <code>font-weight</code> separated by a colon. Use semantic weights for local fonts (e.g. <code>Menlo:bold</code>) and numerical weights for Google Fonts (e.g. <code>Fira Mono:700</code>).</p>
+
+                    <strong>Save/Load</strong>
+                    <p>All changes are transparently saved to your browser's <a href="http://diveintohtml5.info/storage.html" target="_blank">localStorage</a> and reloaded automatically on future visits.</p>
+
+                    <strong>Reset</strong>
+                    <p>Double-click on a label to reset a setting to its initial state.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="aboutModalLabel">Hex o'clock</h4>
+                    <h4 class="modal-title" id="aboutModalLabel">About</h4>
                 </div>
                 <div class="modal-body">
-                    <p><strong>About</strong>
-                    </p>
-                    <p>Based upon <a href="http://www.jacopocolo.com/hexclock/" target="_blank">hex clock</a>, a clock using the hex-value of the current time as background color, and my own <a href="https://github.com/idleberg/fl_Ed" target="_blank">fl_Ed</a> interface experimentation. This fork lets you manipulate the color and text parameters seen on this website. All changes will be sabed in your browser's <a href="http://diveintohtml5.info/storage.html" target="_blank">localStorage</a> and restored on future visits.
-                        <p>
+                    <p>Based upon <a href="http://www.jacopocolo.com/hexclock/" target="_blank">hex clock</a>, a clock using the hex-value of the current time as background color, and my own <a href="https://github.com/idleberg/fl_Ed" target="_blank">fl_Ed</a> interface experimentation. This fork lets you manipulate the color and text parameters seen on this website. All changes will be saved to your browser's <a href="http://diveintohtml5.info/storage.html" target="_blank">localStorage</a> and restored on future visits.<p>
 
-                            <strong>Credits</strong>
-                            <ul>
-                                <li class="item"><a href="https://github.com/jacopocolo/Hex-clock" target="_blank">Hex clock</a> by Jacopo Colo</li>
-                                <li class="item"><a href="http://subtlepatterns.com/low-contrast-linen/">Linen Texture</a> by <a href="http://www.subtlepatterns.com/" target="_blank">Subtle Patterns</a>
-                                </li>
-                            </ul>
+                    <strong>Credits</strong>
+                    <ul>
+                        <li class="item"><a href="https://github.com/jacopocolo/Hex-clock" target="_blank">Hex clock</a> by Jacopo Colo</li>
+                        <li class="item"><a href="http://subtlepatterns.com/low-contrast-linen/">Linen Texture</a> by <a href="http://www.subtlepatterns.com/" target="_blank">Subtle Patterns</a>
+                        </li>
+                    </ul>
 
-                            <p>This project is released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> and hosted on <a href="https://github.com/idleberg/hex-o-clock" target="_blank">GitHub</a>.</p>
+                    <p>This project is released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> and hosted on <a href="https://github.com/idleberg/hex-o-clock" target="_blank">GitHub</a>.</p>
 
                 </div>
 

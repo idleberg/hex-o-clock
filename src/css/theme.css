@@ -17,7 +17,6 @@ body {
 	transition: all 0.5s ease;
 	font-family: 'Fira Sans', 'HelveticaNeue-Thin', Helvetica, Arial, sans-serif;
 	font-size:14px;
-	font-weight:300;
 	padding:0;
 	margin:0;
 	overflow: hidden;
@@ -80,7 +79,7 @@ label {
 .navbar-default .navbar-offcanvas, .navmenu-default {
 	/* http://subtlepatterns.com/ */
 	background: #222 url(../img/texture.png) repeat;
-	border-color: #444;
+	border-color: #111;
 }
 
 .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover, .navmenu-default .navmenu-nav>li>a:focus, .navmenu-default .navmenu-nav>li>a:hover {
@@ -161,7 +160,7 @@ a:focus, a:active {
 
 #hex {
   color: #fff;
-  font-family: 'Lato', Menlo, monospace;
+  font-family: 'Fira Mono', Menlo, sans-serif;
   text-align: center;
   display: block;
   min-width: 200px;

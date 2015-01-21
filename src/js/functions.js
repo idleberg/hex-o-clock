@@ -89,7 +89,7 @@ function changeFont() {
 
   $('#hex').css('font-size', size+'em');
   $('#hex').css({
-    'font-family': font['family'] + ', Menlo, monospace',
+    'font-family': font['family'] + ', Menlo, "Courier New", monospace',
     'font-weight': font['weight']
   });
 
