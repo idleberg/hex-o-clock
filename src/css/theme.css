@@ -148,6 +148,11 @@ a:focus, a:active {
   border-radius:0;
 }
 
+.form-control:focus {
+	box-shadow: none;
+	border-color:#eee;
+}
+
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
