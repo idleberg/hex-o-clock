@@ -1,5 +1,9 @@
 # Hex o'clock
 
+[![GitHub release](https://img.shields.io/github/release/idleberg/hex-o-clock.svg?style=flat-square)](https://github.com/idleberg/hex-o-clock/releases)
+[![Travis](https://img.shields.io/travis/idleberg/hex-o-clock.svg?style=flat-square)](https://travis-ci.org/idleberg/hex-o-clock)
+[![David](https://img.shields.io/david/dev/idleberg/hex-o-clock.svg?style=flat-square)](https://david-dm.org/idleberg/hex-o-clock#info=devDependencies)
+
 A hexadecimal color clock, based upon Jacopo Colò's [Hex clock](http://www.jacopocolo.com/hexclock/). This fork let's you manipulate color and text parameters. All changes will be saved in your browser's [localStorage](http://diveintohtml5.info/storage.html) and restored on future visits.
 
 ## Installation
