@@ -187,8 +187,12 @@ a:focus, a:active {
   transform: translate(-50%,-50%);
 }
 
-.#{
+#sweetspot{
   z-index:10;
+}
+
+#configMenu{
+  font-weight:300;
 }
 
 .navbar-offcanvas{

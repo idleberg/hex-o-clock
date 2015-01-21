@@ -77,7 +77,7 @@ function changeFont() {
 
   font = getFontMetrics(family);
 
-  $('.google-font').delay(1000).queue( function(next){ 
+  $('.google-font').delay(1500).queue( function(next){ 
     $(this).prop('href', 'http://fonts.googleapis.com/css?family='+font['google']);
     next(); 
    });
