@@ -31,7 +31,7 @@ $(function() {
       });
   $('div.background').css('-webkit-filter', 'invert('+css['invert-percentage']+'%) hue-rotate('+css['hue-rotate']+'deg) saturate('+css['saturate']+'%)');
 
-  $("body").fadeIn('slow');
+  $("body").fadeIn('fast');
 
   // Change textsize
   $('#inputFontSize').bind("click mousemove keydown",function (e) {
