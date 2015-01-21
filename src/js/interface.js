@@ -50,7 +50,7 @@ $(function() {
   });
 
   $('#labelFontSize').dblclick(function() {
-    $('#valueFontSize').text('9em');
+    $('#valueFontSize').text('12em');
     invert = $('#inputFontSize').val(9);
     changeFont();
   });
@@ -74,7 +74,7 @@ $(function() {
   });
 
   $('#labelFontFamily').dblclick(function() {
-    saturate = $('#inputFontFamily').val('Lato:100');
+    saturate = $('#inputFontFamily').val('Fira Mono:700');
     changeFont();
   });
 
@@ -106,7 +106,7 @@ $(function() {
     if (distance <= 500) {
       $('.toggle-menu').stop().fadeIn(100);
     } else {
-      $('.toggle-menu').stop().fadeOut(5000);
+      $('.toggle-menu').fadeOut(5000);
     }   
   });
 

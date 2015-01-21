@@ -23,8 +23,8 @@ function setDefaults() {
 
   var css = [];
   
-  css['font'] = "Lato:100";
-  css['font-size'] = "9";
+  css['font'] = "Fira Mono:700";
+  css['font-size'] = "12";
   css['invert-percentage'] = "0";
   css['hue-rotate'] = "0";
   css['saturate'] = "100";
