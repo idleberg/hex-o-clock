@@ -1,7 +1,7 @@
 $(function() {
 
   console.log('Hex o’clock');
-  console.log('https://github.com/idleberg.com/hex-o-clock');
+  console.log('https://github.com/idleberg/hex-o-clock');
 
   css = getData();
 
