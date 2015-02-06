@@ -178,6 +178,7 @@ a:focus, a:active {
   -o-transition: font-size 0.333s ease;
   transition: font-size 0.333s ease;
   z-index:0;
+  cursor: default;
 }
 
 .absolute-center {
