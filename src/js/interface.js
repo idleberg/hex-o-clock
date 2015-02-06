@@ -87,7 +87,7 @@ $(function() {
   $('.toggle-menu').delay(5000).fadeOut(5000);
 
   $(document).mouseleave(function() {
-    $('.toggle-menu').stop().fadeOut(2000);
+    $('.toggle-menu').finish().fadeOut(2000);
   });
 
 
@@ -104,7 +104,7 @@ $(function() {
     mY = e.pageY;
     distance = calculateDistance($element, mX, mY);
     if (distance <= 500) {
-      $('.toggle-menu').stop().fadeIn(100);
+      $('.toggle-menu').finish().fadeIn(200);
     } else {
       $('.toggle-menu').fadeOut(5000);
     }   
