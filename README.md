@@ -4,7 +4,7 @@
 [![Travis](https://img.shields.io/travis/idleberg/hex-o-clock.svg?style=flat-square)](https://travis-ci.org/idleberg/hex-o-clock)
 [![David](https://img.shields.io/david/dev/idleberg/hex-o-clock.svg?style=flat-square)](https://david-dm.org/idleberg/hex-o-clock#info=devDependencies)
 
-A hexadecimal color clock, based upon Jacopo Colò's [Hex clock](http://www.jacopocolo.com/hexclock/). This fork let's you manipulate color and text parameters. All changes will be saved in your browser's [localStorage](http://diveintohtml5.info/storage.html) and restored on future visits.
+A hexadecimal color clock, based upon Jacopo Colò's [Hex clock](http://www.jacopocolo.com/hexclock/). This fork let's you manipulate color and text parameters with all changes saved to your browser's [localStorage](http://diveintohtml5.info/storage.html), then restored on future visits.
 
 *Watch a [live demo](http://idleberg.github.io/hex-o-clock/) (or [video](http://vimeo.com/idleberg/hex-o-clock))*
 
