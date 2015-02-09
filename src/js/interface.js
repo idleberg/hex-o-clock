@@ -76,7 +76,7 @@ $(function() {
   });
 
   $('#labelFontFamily').dblclick(function() {
-    saturate = $('#inputFontFamily').val('Fira Mono:700');
+    saturate = $('#inputFontFamily').val('Lato:100');
     changeFont();
   });
 
