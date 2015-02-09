@@ -6,7 +6,8 @@ $(function() {
   css = getData();
 
   google_font = css['font'].replace(' ', '+');
-  font = getFontMetrics(css['font']);
+         font = getFontMetrics(css['font']);
+
 
   // Set labels
   $('#valueFontSize').text(css['font-size'] + 'em');
@@ -16,12 +17,14 @@ $(function() {
   $('.google-font').prop('href', 'http://fonts.googleapis.com/css?family='+google_font);
   $('#inputFontFamily').text(css['font']);
   
+
   // Set slider values
   $('#inputFontSize').val(css['font-size']);
   $('#inputInvert').val(css['invert-percentage']);
   $('#inputHue').val(css['hue-rotate']);
   $('#inputSaturate').val(css['saturate']);
   $('#inputFontFamily').val(css['font']);
+
 
   // Set CSS// Set textsize label
   $('#hex').css('font-size', css['font-size'] + 'em');
@@ -36,8 +39,7 @@ $(function() {
   // Change textsize
   $('#inputFontSize').bind("click mousemove keydown",function (e) {
     changeFont();
-  });
-    
+  });    
 
 
   // Change invert percentage
@@ -91,6 +93,7 @@ $(function() {
   });
 
 
+
   // http://css-tricks.com/snippets/jquery/calculate-distance-between-mouse-and-element/
   var mX, mY, distance,
   $element  = $('#sweetspot');
@@ -109,6 +112,7 @@ $(function() {
       $('.toggle-menu').fadeOut(5000);
     }   
   });
+
 
   // http://stackoverflow.com/a/23925132/1329116
   $(".modal").on("show.bs.modal", function() {

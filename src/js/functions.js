@@ -1,3 +1,4 @@
+// load options
 function getData() {
 
   var css = [];
@@ -19,26 +20,28 @@ function getData() {
 }
 
 
+// set default options
 function setDefaults() {
 
   var css = [];
   
-  css['font'] = "Fira Mono:700";
-  css['font-size'] = "12";
+               css['font'] = "Fira Mono:700";
+          css['font-size'] = "12";
   css['invert-percentage'] = "0";
-  css['hue-rotate'] = "0";
-  css['saturate'] = "100";
+         css['hue-rotate'] = "0";
+           css['saturate'] = "100";
 
   return css;
 }
 
 
+// get and parse font setting
 function getFontMetrics(input) {
 
   var output = [];
 
   if (input.indexOf(':') > -1) {
-      font_array     = input.split(':');
+        font_array     = input.split(':');
       output['family'] = font_array[0];
       output['weight'] = font_array[1];
       output['google'] = input.replace(' ', '+');
@@ -52,25 +55,31 @@ function getFontMetrics(input) {
 }
 
 
+//load and set filter settings
 function changeFilter() {
-  invert = $('#inputInvert').val();
-  hue = $('#inputHue').val();
+
+    invert = $('#inputInvert').val();
+       hue = $('#inputHue').val();
   saturate = $('#inputSaturate').val();
+
   if (debug === true) {
     console.log('Invert percentage changed to:\t'+invert);
     console.log('Hue rotate changed to:\t'+hue);
     console.log('Saturation changed to:\t'+saturate);
   }
+
   $('div.background').css('-webkit-filter', 'invert('+invert+'%) hue-rotate('+hue+'deg) saturate('+saturate+'%)');
   $('#valueInvert').text(invert+'%');
   $('#valueHue').text(hue+'°');
   $('#valueSaturate').text(saturate+'%');
+
   localStorage.setItem("invert-percentage", invert);
   localStorage.setItem("hue-rotate", hue);
   localStorage.setItem("saturate", saturate);
 }
 
 
+// load and set font settings
 function changeFont() {
   size = $('#inputFontSize').val();
   family = $('#inputFontFamily').val();
@@ -100,6 +109,7 @@ function changeFont() {
 }
 
 
+// load localStorage
 var use_storage = function() {
   try {
     return 'localStorage' in window && window.localStorage !== null;
@@ -108,6 +118,8 @@ var use_storage = function() {
   }
 };
 
+
+// hexclock (http://www.jacopocolo.com/hexclock/)
 function timeToHex() {
   var d = new Date();
   var t = [];
