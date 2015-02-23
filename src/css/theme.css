@@ -15,13 +15,14 @@ html {
 
 body {
 	transition: all 0.5s ease;
-	font-family: 'Fira Sans', 'HelveticaNeue-Thin', Helvetica, Arial, sans-serif;
-	font-size:14px;
+	font-family: 'Lato', 'Proxima Nova', 'Lucida Grande', 'Lucide Console', sans-serif;
+	font-size:16px;
 	font-weight:300;
+    color: #999;
 	padding:0;
 	margin:0;
 	overflow: hidden;
-	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
 	line-height:1.6em;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
@@ -58,7 +59,7 @@ label {
 
 .nav>li{
 	padding: 5px;
-	color: #777;
+	color: #eee;
 }
 
 .nav>li>a{
@@ -66,7 +67,7 @@ label {
 }
 
 .# li>a {
-	color: #fff;
+	color: #ee;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
@@ -79,13 +80,15 @@ label {
 }
 
 .navbar-default .navbar-offcanvas, .navmenu-default {
-	/* http://subtlepatterns.com/ */
-	background: #222 url(../img/texture.png) repeat;
-	border-color: #111;
+	background: #222;
+	border-color: #333;
 }
 
+.navbar-default .navbar-offcanvas .navmenu-brand, .navmenu-default .navmenu-brand,
+.navbar-default .navbar-offcanvas .navmenu-brand:focus, .navbar-default .navbar-offcanvas .navmenu-brand:hover, .navmenu-default .navmenu-brand:focus, .navmenu-default .navmenu-brand:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav>li>a, .navmenu-default .navmenu-nav>li>a,
 .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover, .navmenu-default .navmenu-nav>li>a:focus, .navmenu-default .navmenu-nav>li>a:hover {
-	color: #ccc;
+	color: #eee;
 	background-color: transparent;
 }
 
@@ -96,7 +99,8 @@ label {
 
 .navbar-offcanvas, .navmenu{
 	width: auto;
-	padding: 0 10px;
+	padding: 0 20px;
+    min-width: 300px;
 }
 
 .divider{
@@ -146,7 +150,7 @@ a:focus, a:active {
 .form-control {
   background-color: rgba(0, 0, 0, 0.25);
   color: #eee;
-  border: 1px solid #111;
+  border: 1px solid #999;
   border-radius:0;
 }
 
@@ -204,4 +208,33 @@ a:focus, a:active {
 
 .modal-content {
 	border-radius:0;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 9px;
+    background: #121212;
+    border: 1px solid #999;
+    border-radius: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #eee;
+    height: 7px;
+    width: 18px;
+    border-radius: 0;
+    background: #eee;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+
 }
