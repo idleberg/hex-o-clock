@@ -208,6 +208,8 @@ a:focus, a:active {
 
 .modal-content {
 	border-radius:0;
+  font-size: 1.1em;
+  color: #111;
 }
 
 input[type=range]{
