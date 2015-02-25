@@ -54,7 +54,7 @@
                 <label id="labelInvert">Invert: <span id="valueInvert"></span>
                 </label>
                 <form action="action_page.php" method="get">
-                    <input id="inputInvert" class="filter" type="range" name="points" min="0" max="100" value="0">
+                    <input id="inputInvert" class="filter" type="range" name="points" min="0" max="100" value="0" data-role="none">
                 </form>
             </li>
 
@@ -62,7 +62,7 @@
                 <label id="labelHue">Hue rotate: <span id="valueHue"></span>
                 </label>
                 <form action="action_page.php" method="get">
-                    <input id="inputHue" class="filter" type="range" name="points" min="0" max="360" value="0">
+                    <input id="inputHue" class="filter" type="range" name="points" min="0" max="360" value="0" data-role="none">
                 </form>
             </li>
 
@@ -70,7 +70,7 @@
                 <label id="labelSaturate">Saturate: <span id="valueSaturate" class="filter-label"></span>
                 </label>
                 <form action="action_page.php" method="get">
-                    <input id="inputSaturate" class="filter" type="range" name="points" min="0" max="500" value="100">
+                    <input id="inputSaturate" class="filter" type="range" name="points" min="0" max="500" value="100" data-role="none">
                 </form>
             </li>
 
@@ -88,7 +88,7 @@
             <li>
                 <label id="labelFontSize">Font size: <span id="valueFontSize"></span>
                 </label>
-                <input id="inputFontSize" type="range" name="points" min="1" max="40" value="4">
+                <input id="inputFontSize" type="range" name="points" min="1" max="40" value="4" data-role="none">
             </li>
         </ul>
 
@@ -122,7 +122,7 @@
                     <p>All changes are transparently saved to your browser's <a href="http://diveintohtml5.info/storage.html" target="_blank">localStorage</a> and reloaded automatically on future visits.</p>
 
                     <h3>Reset</h3>
-                    <p>Double-click on a label to reset a setting to its initial state.</p>
+                    <p>Double-click on a label to reset a setting to its initial state. Use tap-hold on touch devices.</p>
 
                 </div>
 
@@ -155,7 +155,7 @@
         debug = false;
         precision = 100;
     </script>
-    <!--script src="https:cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js" defer></script-->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" defer></script>
     <script type="text/javascript" src="dist/js/hex-o-clock.min.js" defer></script>
 </body>
 

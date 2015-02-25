@@ -37,13 +37,13 @@ $(function() {
   $("body").fadeIn('fast');
 
   // Change textsize
-  $('#inputFontSize').bind("click mousemove keydown",function (e) {
+  $('#inputFontSize').bind("mouseup mousemove keydown vmouseup vmousemove",function (e) {
     changeFont();
   });    
 
 
   // Change invert percentage
-  $('.filter, .filter-label').bind("click mousemove keydown",function (e) {
+  $('.filter, .filter-label').bind("mouseup mousemove keydown vmouseup vmousemove",function (e) {
     changeFilter();
   });
 
@@ -51,31 +51,31 @@ $(function() {
     changeFont();
   });
 
-  $('#labelFontSize').dblclick(function() {
+  $('#labelFontSize').bind("dblclick taphold", function() {
     $('#valueFontSize').text('12em');
     invert = $('#inputFontSize').val(12);
     changeFont();
   });
 
-  $('#labelInvert').dblclick(function() {
+  $('#labelInvert').bind("dblclick taphold",function() {
     $('#valueInvert').text('0%');
     invert = $('#inputInvert').val(0);
     changeFilter();
   });
 
-  $('#labelHue').dblclick(function() {
+  $('#labelHue').bind("dblclick taphold",function() {
     $('#valueHue').text('0°');
     hue_rotate = $('#inputHue').val(0);
     changeFilter();
   });
 
-  $('#labelSaturate').dblclick(function() {
+  $('#labelSaturate').bind("dblclick taphold",function() {
     $('#valueSaturate').text('100%');
     saturate = $('#inputSaturate').val(100);
     changeFilter();
   });
 
-  $('#labelFontFamily').dblclick(function() {
+  $('#labelFontFamily').bind("dblclick taphold",function() {
     saturate = $('#inputFontFamily').val('Lato:100');
     changeFont();
   });
