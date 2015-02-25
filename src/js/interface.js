@@ -80,6 +80,14 @@ $(function() {
     changeFont();
   });
 
+  $('.background').bind("swipeleft",function() {
+    $('.offcanvas').offcanvas('show')
+  });
+
+  $('.background').bind("swiperight",function() {
+    $('.offcanvas').offcanvas('hide')
+  });
+
 
   $('.close-menu').click(function (event) {
     $('.navmenu').offcanvas('hide');
