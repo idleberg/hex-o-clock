@@ -59,7 +59,7 @@ label {
 
 .nav>li{
 	padding: 5px;
-	color: #eee;
+	color: #fff;
 }
 
 .nav>li>a{
@@ -82,13 +82,14 @@ label {
 .navbar-default .navbar-offcanvas, .navmenu-default {
 	background: #222;
 	border-color: #333;
+  opacity: 0.95;
 }
 
 .navbar-default .navbar-offcanvas .navmenu-brand, .navmenu-default .navmenu-brand,
 .navbar-default .navbar-offcanvas .navmenu-brand:focus, .navbar-default .navbar-offcanvas .navmenu-brand:hover, .navmenu-default .navmenu-brand:focus, .navmenu-default .navmenu-brand:hover,
 .navbar-default .navbar-offcanvas .navmenu-nav>li>a, .navmenu-default .navmenu-nav>li>a,
 .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover, .navmenu-default .navmenu-nav>li>a:focus, .navmenu-default .navmenu-nav>li>a:hover {
-	color: #eee;
+	color: #fff;
 	background-color: transparent;
 }
 
@@ -149,14 +150,14 @@ a:focus, a:active {
 
 .form-control {
   background-color: rgba(0, 0, 0, 0.25);
-  color: #eee;
+  color: #fff;
   border: 1px solid #999;
   border-radius:0;
 }
 
 .form-control:focus {
 	box-shadow: none;
-	border-color:#eee;
+	border-color:#fff;
 }
 
 .btn-link:hover,
@@ -226,11 +227,11 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: 1px solid #eee;
+    border: 1px solid #fff;
     height: 9px;
     width: 18px;
     border-radius: 0;
-    background: #eee;
+    background: #fff;
 }
 
 input[type=range]:focus {
