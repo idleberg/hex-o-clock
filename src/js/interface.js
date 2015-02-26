@@ -1,5 +1,7 @@
 $(function() {
 
+  $.mobile.loading().hide();
+
   console.log('Hex o’clock');
   console.log('https://github.com/idleberg/hex-o-clock');
 
