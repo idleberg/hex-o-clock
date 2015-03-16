@@ -25,11 +25,13 @@ function setDefaults() {
 
   var css = [];
   
-               css['font'] = "Lato:100";
-          css['font-size'] = "12";
-  css['invert-percentage'] = "0";
-         css['hue-rotate'] = "0";
-           css['saturate'] = "100";
+        css['font'] = "Lato:100";
+   css['font-size'] = "12";
+      css['invert'] = "0";
+         css['hue'] = "0";
+    css['saturate'] = "100";
+  css['brightness'] = "100";
+    css['contrast'] = "100";
 
   return css;
 }
@@ -58,31 +60,39 @@ function getFontMetrics(input) {
 //load and set filter settings
 function changeFilter() {
 
-    invert = $('#inputInvert').val();
-       hue = $('#inputHue').val();
-  saturate = $('#inputSaturate').val();
+      invert = $('#input-invert').val();
+         hue = $('#input-hue').val();
+    saturate = $('#input-saturate').val();
+  brightness = $('#input-brightness').val();
+    contrast = $('#input-contrast').val();
 
   if (debug === true) {
     console.log('Invert percentage changed to:\t'+invert);
     console.log('Hue rotate changed to:\t'+hue);
     console.log('Saturation changed to:\t'+saturate);
+    console.log('Brightness changed to:\t'+brightness);
+    console.log('Contrast changed to:\t'+contrast);
   }
 
-  $('div.background').css('-webkit-filter', 'invert('+invert+'%) hue-rotate('+hue+'deg) saturate('+saturate+'%)');
-  $('#valueInvert').text(invert+'%');
-  $('#valueHue').text(hue+'°');
-  $('#valueSaturate').text(saturate+'%');
+  $('div.background').css('-webkit-filter', 'invert('+invert+'%) hue-rotate('+hue+'deg) saturate('+saturate+'%) brightness('+brightness+'%) contrast('+contrast+'%)');
+  $('#value-invert').text(invert+'%');
+  $('#value-hue').text(hue+'°');
+  $('#value-saturate').text(saturate+'%');
+  $('#value-brightness').text(brightness+'%');
+  $('#value-contrast').text(contrast+'%');
 
-  localStorage.setItem("invert-percentage", invert);
-  localStorage.setItem("hue-rotate", hue);
+  localStorage.setItem("invert", invert);
+  localStorage.setItem("hue", hue);
   localStorage.setItem("saturate", saturate);
+  localStorage.setItem("brightness", brightness);
+  localStorage.setItem("contrast", contrast);
 }
 
 
 // load and set font settings
 function changeFont() {
-  size = $('#inputFontSize').val();
-  family = $('#inputFontFamily').val();
+  size = $('#input-font-size').val();
+  family = $('#input-font-family').val();
 
   font = getFontMetrics(family);
 
@@ -102,7 +112,7 @@ function changeFont() {
     'font-weight': font['weight']
   });
 
-  $('#valueFontSize').text(size+'em');
+  $('#value-font-size').text(size+'em');
 
   localStorage.setItem("font-size", size);
   localStorage.setItem("font", family);

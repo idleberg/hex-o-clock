@@ -50,27 +50,43 @@
         <h1 class="navmenu-brand">Background</h1>
         <ul class="nav navmenu-nav">
 
+            <!-- Invert -->
             <li>
-                <label id="labelInvert">Invert: <span id="valueInvert"></span>
-                </label>
+                <label id="label-invert">Invert: <span id="value-invert"></span></label>
                 <form action="action_page.php" method="get">
-                    <input id="inputInvert" class="filter" type="range" name="points" min="0" max="100" value="0" data-role="none">
+                    <input id="input-invert" class="filter" type="range" name="points" min="0" max="100" value="0" data-role="none">
                 </form>
             </li>
 
+            <!-- Hue Rotate -->
             <li>
-                <label id="labelHue">Hue rotate: <span id="valueHue"></span>
-                </label>
+                <label id="label-hue">Hue rotate: <span id="value-hue"></span></label>
                 <form action="action_page.php" method="get">
-                    <input id="inputHue" class="filter" type="range" name="points" min="0" max="360" value="0" data-role="none">
+                    <input id="input-hue" class="filter" type="range" name="points" min="0" max="360" value="0" data-role="none">
                 </form>
             </li>
 
+            <!-- Saturate -->
             <li>
-                <label id="labelSaturate">Saturate: <span id="valueSaturate" class="filter-label"></span>
-                </label>
+                <label id="label-saturate">Saturate: <span id="value-saturate" class="filter-label"></span></label>
                 <form action="action_page.php" method="get">
-                    <input id="inputSaturate" class="filter" type="range" name="points" min="0" max="500" value="100" data-role="none">
+                    <input id="input-saturate" class="filter" type="range" name="points" min="0" max="500" value="100" data-role="none">
+                </form>
+            </li>
+
+            <!-- Contrast -->
+            <li>
+                <label id="label-contrast">Contrast: <span id="value-contrast" class="filter-label"></span></label>
+                <form action="action_page.php" method="get">
+                    <input id="input-contrast" class="filter" type="range" name="points" min="0" max="500" value="100" data-role="none">
+                </form>
+            </li>
+
+            <!-- Brightness -->
+            <li>
+                <label id="label-brightness">Brightness: <span id="value-brightness" class="filter-label"></span></label>
+                <form action="action_page.php" method="get">
+                    <input id="input-brightness" class="filter" type="range" name="points" min="0" max="500" value="100" data-role="none">
                 </form>
             </li>
 
@@ -81,14 +97,14 @@
         <ul class="nav navmenu-nav">
             <li>
                 <div class="form-group">
-                    <label id="labelFontFamily">Font family:</label>
-                    <input type="text" class="form-control" id="inputFontFamily" placeholder="e.g. Fira Mono, Lato">
+                    <label id="label-font-family">Font family:</label>
+                    <input type="text" class="form-control" id="input-font-family" placeholder="e.g. Fira Mono, Lato">
                 </div>
             </li>
             <li>
-                <label id="labelFontSize">Font size: <span id="valueFontSize"></span>
+                <label id="label-font-size">Font size: <span id="value-font-size"></span>
                 </label>
-                <input id="inputFontSize" type="range" name="points" min="1" max="40" value="4" data-role="none">
+                <input id="input-font-size" type="range" name="points" min="1" max="40" value="4" data-role="none">
             </li>
         </ul>
 
@@ -96,9 +112,8 @@
 
         <ul class="nav navmenu-nav">
 
-            </li>
             <li><a href="#help" target="_blank" data-toggle="modal" data-target="#helpModal"><i class="fa fa-fw fa-question-circle"></i> Help</a>
-            <li><a href="#about" target="_blank" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-fw fa-info-circle"></i> About</a>
+            <li><a href="http://github.com/idleberg/hex-o-clock" target="_blank"><i class="fa fa-fw fa-github"></i> GitHub</a>
             </li>
             <li><a href="#" class="close-menu"><i class="fa fa-fw fa-times-circle"></i> Close</a>
         </ul>
@@ -123,26 +138,6 @@
 
                     <h3>Reset</h3>
                     <p>Double-click on a label to reset a setting to its initial state. Use tap-hold on touch devices.</p>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- About Modal -->
-    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="aboutModalLabel">About</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Based upon <a href="http://www.jacopocolo.com/hexclock/" target="_blank">hex clock</a>, a clock using the hex-value of the current time as background color, and my own <a href="https://github.com/idleberg/fl_Ed" target="_blank">fl_Ed</a> interface experimentation. This fork lets you manipulate the color and text parameters seen on this website. All changes will be saved to your browser's <a href="http://diveintohtml5.info/storage.html" target="_blank">localStorage</a> and restored on future visits.<p>
-
-                    <p>This project is released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> and hosted on <a href="https://github.com/idleberg/hex-o-clock" target="_blank">GitHub</a>.</p>
 
                 </div>
 

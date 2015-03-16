@@ -12,20 +12,24 @@ $(function() {
 
 
   // Set labels
-  $('#valueFontSize').text(css['font-size'] + 'em');
-  $('#valueInvert').text(css['invert-percentage'] + '%');
-  $('#valueHue').text(css['hue-rotate'] + '°');
-  $('#valueSaturate').text(css['saturate'] + '%');
+  $('#value-font-size').text(css['font-size'] + 'em');
+  $('#value-invert').text(css['invert'] + '%');
+  $('#value-hue').text(css['hue'] + '°');
+  $('#value-saturate').text(css['saturate'] + '%');
+  $('#value-brightness').text(css['brightness'] + '%');
+  $('#value-contrast').text(css['contrast'] + '%');
   $('.google-font').prop('href', 'http://fonts.googleapis.com/css?family='+google_font);
-  $('#inputFontFamily').text(css['font']);
+  $('#input-font-family').text(css['font']);
   
 
   // Set slider values
-  $('#inputFontSize').val(css['font-size']);
-  $('#inputInvert').val(css['invert-percentage']);
-  $('#inputHue').val(css['hue-rotate']);
-  $('#inputSaturate').val(css['saturate']);
-  $('#inputFontFamily').val(css['font']);
+  $('#input-font-size').val(css['font-size']);
+  $('#input-invert').val(css['invert']);
+  $('#input-hue').val(css['hue']);
+  $('#input-saturate').val(css['saturate']);
+  $('#input-brightness').val(css['brightness']);
+  $('#input-contrast').val(css['contrast']);
+  $('#input-font-family').val(css['font']);
 
 
   // Set CSS// Set textsize label
@@ -34,12 +38,12 @@ $(function() {
         'font-family': font['family'] + ', Menlo, "Courier New", monospace',
         'font-weight': font['weight']
       });
-  $('div.background').css('-webkit-filter', 'invert('+css['invert-percentage']+'%) hue-rotate('+css['hue-rotate']+'deg) saturate('+css['saturate']+'%)');
+  $('div.background').css('-webkit-filter', 'invert('+css['invert']+'%) hue-rotate('+css['hue']+'deg) saturate('+css['saturate']+'%) brightness('+css['brightness']+'%) contrast('+css['contrast']+'%)');
 
   $("body").fadeIn('fast');
 
   // Change textsize
-  $('#inputFontSize').bind("mouseup mousemove keydown vmouseup vmousemove",function (e) {
+  $('#input-font-size').bind("mouseup mousemove keydown vmouseup vmousemove",function (e) {
     changeFont();
   });    
 
@@ -49,36 +53,48 @@ $(function() {
     changeFilter();
   });
 
-  $('#inputFontFamily').on('input', function() {
+  $('#input-font-family').on('input', function() {
     changeFont();
   });
 
-  $('#labelFontSize').bind("dblclick taphold", function() {
-    $('#valueFontSize').text('12em');
-    invert = $('#inputFontSize').val(12);
+  $('#label-font-size').bind("dblclick taphold", function() {
+    $('#value-font-size').text('12em');
+    invert = $('#input-font-size').val(12);
     changeFont();
   });
 
-  $('#labelInvert').bind("dblclick taphold",function() {
-    $('#valueInvert').text('0%');
-    invert = $('#inputInvert').val(0);
+  $('#label-invert').bind("dblclick taphold",function() {
+    $('#value-invert').text('0%');
+    invert = $('#input-invert').val(0);
     changeFilter();
   });
 
-  $('#labelHue').bind("dblclick taphold",function() {
-    $('#valueHue').text('0°');
-    hue_rotate = $('#inputHue').val(0);
+  $('#label-hue').bind("dblclick taphold",function() {
+    $('#value-hue').text('0°');
+    hue_rotate = $('#input-hue').val(0);
     changeFilter();
   });
 
-  $('#labelSaturate').bind("dblclick taphold",function() {
-    $('#valueSaturate').text('100%');
-    saturate = $('#inputSaturate').val(100);
+  $('#label-saturate').bind("dblclick taphold",function() {
+    $('#value-saturate').text('100%');
+    saturate = $('#input-saturate').val(100);
     changeFilter();
   });
 
-  $('#labelFontFamily').bind("dblclick taphold",function() {
-    saturate = $('#inputFontFamily').val('Lato:100');
+  $('#label-brightness').bind("dblclick taphold",function() {
+    $('#value-brightness').text('100%');
+    brightness = $('#input-brightness').val(100);
+    changeFilter();
+  });
+
+  $('#label-contrast').bind("dblclick taphold",function() {
+    $('#value-contrast').text('100%');
+    contrast = $('#input-contrast').val(100);
+    changeFilter();
+  });
+
+  $('#label-font-family').bind("dblclick taphold",function() {
+    saturate = $('#input-font-family').val('Lato:100');
     changeFont();
   });
 
