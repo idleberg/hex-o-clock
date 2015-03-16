@@ -104,6 +104,10 @@ label {
     min-width: 300px;
 }
 
+.offcanvas a, .offcanvas a:hover {
+  color:inherit;
+}
+
 .divider{
 	height: 1px;
 	margin: 9px 0;
