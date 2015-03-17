@@ -240,6 +240,7 @@ input[type=range]::-webkit-slider-runnable-track {
     background: #000;
     border: 1px solid #999;
     border-radius: 0;
+    cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-runnable-track:active {
@@ -253,11 +254,13 @@ input[type=range]::-webkit-slider-thumb {
     width: 18px;
     border-radius: 0;
     background: #fff;
+    cursor: -webkit-grab;
 }
 
 input[type=range]::-webkit-slider-thumb:active {
   background: #fff;
   border-color: #fff;
+  cursor: -webkit-grabbing;
 }
 
 input[type=range]:focus {
