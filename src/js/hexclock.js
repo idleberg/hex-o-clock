@@ -5,7 +5,7 @@ function refreshData() {
 
     var	color = '#' + t.hour + t.min + t.sec;
 
-    $("div.background").css({"background-color": color, "transition": "all 0.2s" });
+    $("div.background").css({"background-color": color, "transition": "all 0.5s" });
     $("p#hex").text(color);
     $('fa-cog').css("-webkit-filter", "invert(100%");
 
