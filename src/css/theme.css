@@ -66,8 +66,9 @@ label {
 	padding: 0;
 }
 
-.# li>a {
-	color: #ee;
+a.ui-link, a.ui-link:hover, a.ui-link:active, a.ui-link:focus {
+  text-decoration: none;
+  color:inherit;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
@@ -93,9 +94,10 @@ label {
 	background-color: transparent;
 }
 
-.navmenu-brand{
+.panel-title{
 	padding: 10px 0;
 	font-size: 1.2em;
+  color: #fff;
 }
 
 .navbar-offcanvas, .navmenu{
@@ -174,6 +176,17 @@ a:focus, a:active {
   outline:transparent;
 }
 
+.container-panel {
+  max-width: 300px;
+}
+
+.panel,
+.panel-default>.panel-heading,
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+  background-color: transparent;
+  border:0;
+  padding:0;
+}
 
 #hex {
   color: #fff;

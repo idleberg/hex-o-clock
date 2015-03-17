@@ -57,25 +57,25 @@ $(function() {
     changeFont();
   });
 
-  $('#label-font-size').bind("dblclick taphold", function() {
+  $('#label-font-size, #input').bind("dblclick taphold", function() {
     $('#value-font-size').text('12em');
     invert = $('#input-font-size').val(12);
     changeFont();
   });
 
-  $('#label-invert').bind("dblclick taphold",function() {
+  $('#label-invert, #input').bind("dblclick taphold",function() {
     $('#value-invert').text('0%');
     invert = $('#input-invert').val(0);
     changeFilter();
   });
 
-  $('#label-hue').bind("dblclick taphold",function() {
+  $('#label-hue, #input').bind("dblclick taphold",function() {
     $('#value-hue').text('0°');
     hue_rotate = $('#input-hue').val(0);
     changeFilter();
   });
 
-  $('#label-saturate').bind("dblclick taphold",function() {
+  $('#label-saturate, #input').bind("dblclick taphold",function() {
     $('#value-saturate').text('100%');
     saturate = $('#input-saturate').val(100);
     changeFilter();
@@ -87,13 +87,13 @@ $(function() {
     changeFilter();
   });
 
-  $('#label-contrast').bind("dblclick taphold",function() {
+  $('#label-contrast, #input').bind("dblclick taphold",function() {
     $('#value-contrast').text('100%');
     contrast = $('#input-contrast').val(100);
     changeFilter();
   });
 
-  $('#label-font-family').bind("dblclick taphold",function() {
+  $('#label-font-family, #input').bind("dblclick taphold",function() {
     saturate = $('#input-font-family').val('Lato:100');
     changeFont();
   });
