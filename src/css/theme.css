@@ -81,7 +81,7 @@ label {
 
 .navbar-default .navbar-offcanvas, .navmenu-default {
 	background: #222;
-	border-color: #333;
+	border-color: #111;
   opacity: 0.95;
 }
 
@@ -229,6 +229,10 @@ input[type=range]::-webkit-slider-runnable-track {
     border-radius: 0;
 }
 
+input[type=range]::-webkit-slider-runnable-track:active {
+    border-color: #fff;
+}
+
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: 1px solid #fff;
@@ -238,10 +242,11 @@ input[type=range]::-webkit-slider-thumb {
     background: #fff;
 }
 
-input[type=range]:focus {
-    outline: none;
+input[type=range]::-webkit-slider-thumb:active {
+  background: #fff;
+  border-color: #fff;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-
+input[type=range]:focus {
+    outline: none;
 }
