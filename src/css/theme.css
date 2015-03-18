@@ -103,7 +103,7 @@ a.ui-link, a.ui-link:hover, a.ui-link:active, a.ui-link:focus {
 .navbar-offcanvas, .navmenu{
 	width: auto;
 	padding: 0;
-  max-width: 320px;
+  width: 320px;
 }
 
 .offcanvas a, .offcanvas a:hover {
