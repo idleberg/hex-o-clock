@@ -1,5 +1,6 @@
 # Hex o'clock
 
+[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/release/idleberg/hex-o-clock.svg?style=flat-square)](https://github.com/idleberg/hex-o-clock/releases)
 [![Travis](https://img.shields.io/travis/idleberg/hex-o-clock.svg?style=flat-square)](https://travis-ci.org/idleberg/hex-o-clock)
 [![David](https://img.shields.io/david/dev/idleberg/hex-o-clock.svg?style=flat-square)](https://david-dm.org/idleberg/hex-o-clock#info=devDependencies)
