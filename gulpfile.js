@@ -70,8 +70,7 @@ gulp.task('csslint', function() {
   .pipe(csslint({
     'important': false
   }))
-  .pipe(csslint.reporter())
-
+  //.pipe(csslint.reporter())
 });
 
 
